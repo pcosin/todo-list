@@ -105,6 +105,10 @@ form {
   color: rgba(62, 161, 219, 1);
 }
 
+.crossOut {
+  text-decoration: line-through
+}
+
 .trashIcon:hover {
   color: #f00;
 }
