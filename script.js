@@ -1,6 +1,7 @@
 // Get de the variables from the DOM
+import checkCompleted from "./components/checkComplete.js";
+import deleteIcon from "./components/deleteIcon.js";
 
-( () => {
 const btnAddTask = document.querySelector("[data-form-btn]");
 
 
@@ -13,15 +14,16 @@ const creatTask = (e) => {
   const value = inputTask.value
   inputTask.value = ""
   const taskContent = document.createElement("div");
-  taskContent.appendChild(checkCompleted())
+ 
   const taskValue = document.createElement("span");
   taskValue.classList.add("task");
-  taskValue.innerHTML = value
+  taskValue.innerHTML = value;
+  taskContent.appendChild(checkCompleted())
   taskContent.appendChild(taskValue)
-  const content = `
-  <i class="fas fa-trash-alt trashIcon icon"></i>
-`
+  
+
   task.appendChild(taskContent)
+  task.appendChild(deleteIcon())
   list.appendChild(task)
 
 }
@@ -30,21 +32,8 @@ const creatTask = (e) => {
 btnAddTask.addEventListener("click", creatTask) 
 
 
-const checkCompleted = () => {
-  let i = document.createElement("i");
-  i.classList.add("far", "fa-check-square", "icon");
-  i.addEventListener("click", taskCompleted);
-  return i
-}
 
 
-const taskCompleted = (event) => {
-const eventToggle = event.target;
-const text = eventToggle.nextSibling;
-text.classList.toggle("crossOut") 
-eventToggle.classList.toggle("fas")
-eventToggle.classList.toggle("far")
-eventToggle.classList.toggle("completeIcon")
-}
 
-})()
+
+
