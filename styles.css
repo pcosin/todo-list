@@ -42,6 +42,11 @@ form {
   margin-bottom: 15px;
 }
 
+.mainCard button i {
+  vertical-align: middle;
+  margin-left: .2rem;
+}
+
 .inputForm {
   border: none;
   padding: 10px;
