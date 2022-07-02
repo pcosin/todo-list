@@ -135,3 +135,11 @@ form {
 .noTasks {
   font-size: 48px;
 }
+
+
+@media (max-width: 420px) {
+  .btnCreate {
+    padding: 10px 8px;
+  
+  }
+}
