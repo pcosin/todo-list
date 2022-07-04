@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+}
+
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
 main {
   background-image: linear-gradient(
     109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
+    rgba(143,109,219,255),
+    rgba(209,126,242,255)
+
   );
   width: 100%;
   height: 100vh;
@@ -32,6 +39,10 @@ form {
   background-color: #fff;
   padding: 1rem;
   margin-inline: auto;
+}
+
+.icon-app {
+  max-width: 80px;
 }
 
 .title {
@@ -59,17 +70,37 @@ form {
   padding: 0px;
 }
 
-.btnCreate {
-  padding: 10px 15px;
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
-  border: none;
-  color: #fff;
-  border-radius: 5px;
+.button-52 {
+  
+  font-weight: 200;
+  letter-spacing: .2px;
+  padding: 10px 15px 10px;
+  outline: 0;
+  border: 1px solid black;
   cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
+.button-52::after {
+  content: "";
+  background-color:rgba(143,109,219, 0.6);
+  width: 100%;
+  /* z-index: -1; */
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: all ease-in-out 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
 }
 
 .cardsList {
@@ -101,18 +132,21 @@ form {
 
 .icon {
   cursor: pointer;
+  color: rgba(143,109,219,255) ;
 }
 
 .icon:hover {
-  color: rgba(62, 161, 219, 1);
+  /* color: rgba(62, 161, 219, 1); */
 }
 
 .completeIcon {
-  color: rgba(62, 161, 219, 1);
+  color: rgba(143,109,219,255);
 }
 
 .crossOut {
-  text-decoration: line-through
+  text-decoration: line-through;
+  color: rgba(143,109,219,255);
+
 }
 
 .trashIcon:hover {
@@ -136,10 +170,62 @@ form {
   font-size: 48px;
 }
 
+@media (max-width: 460px) {
 
-@media (max-width: 420px) {
-  .btnCreate {
-    padding: 10px 8px;
+
+  .inputForm {
+  
+    width: 58%;
+  }
+  
+}
+
+
+@media (max-width: 440px) {
+  .button-52 {
+    padding: 8px 6px;
+    
   
   }
 }
+
+@media (max-width: 400px) {
+.card {
+  width: min(88%);}}
+ 
+
+
+
+
+@media (max-width: 360px) {
+
+
+  .button-52 {
+    padding: 9px 2px;
+    
+  
+  }
+
+  .inputForm {
+    
+    width: 55%;
+  }
+  
+  
+}
+
+
+@media (max-width: 325px) {
+  .card {
+    width: min(87%);
+  }}
+   
+  
+
+
+
+
+
+
+
+
